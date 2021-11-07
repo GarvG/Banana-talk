@@ -4,7 +4,7 @@ var txtInput = document.querySelector("#txt-input");
 
 var output = document.querySelector("#output-txt");
 
-var url = "	https://api.funtranslations.com/translate/emoji.json" + "?" + "text="
+var url = "https://api.funtranslations.com/translate/minion.json" + "?" + "text="
 
 function UrlGenerator(text) {
     return url + text
