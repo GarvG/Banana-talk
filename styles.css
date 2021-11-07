@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+:root
+{
+    --primary-color:#FDE68A;
+    --width:600px;
+
+}
+textarea{
+    box-sizing: border-box;
+    border: 2px solid black;
+    display: block;
+    width: 100%;
+    min-height: 20vh;
+    margin-top: 2rem;
+    font-size: large;
+    font-family: inherit;
+}
+body
+{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+.center{
+    margin: auto;
+    max-width: var(--width);
+    padding: 2rem;
+}
+#output-txt
+{
+    border: 1px solid black;
+   
+    min-height: 15vh;
+  
+    box-sizing: border-box;
+    width: 100%;
+
+    max-height: 20vh;
+     overflow: scroll; 
+     margin-bottom: 20px;
+  
+}
+.header
+{
+display: block;
+background-color:var(--primary-color);
+}
+.header .h1--header
+{
+    color:black;
+    text-align: center;
+    margin-top: 0px;
+    padding: 1rem;
+}
+
+#btn-translate
+{
+margin-top: 2rem;
+margin-bottom: 2rem;
+background-color: var(--primary-color);
+padding: 1rem 2rem;
+border: none;
+font-family:'Open Sans', sans-serif ;
+font-size: large;
+}
+
+
+.end
+{
+    background-color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.end p
+{
+   max-width: var(--width);
+    margin: auto;
+}
