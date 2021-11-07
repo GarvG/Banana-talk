@@ -1,13 +1,50 @@
-var btnTranslate =document.querySelector("#btn-translate");
+var btnTranslate = document.querySelector("#btn-translate");
 
-var txtInput =document.querySelector("#txt-input");
+var txtInput = document.querySelector("#txt-input");
+
+var output = document.querySelector("#output-txt");
+
+var url = "	https://api.funtranslations.com/translate/emoji.json" + "?" + "text="
+
+function UrlGenerator(text) {
+    return url + text
+}
 console.log(txtInput)
 
-btnTranslate.addEventListener("click", clickEventHandler) 
+btnTranslate.addEventListener("click", clickEventHandler)
 
-//this.style.border="10px solid red"
-function clickEventHandler()
-{
-console.log("YOU CLICKED");
-console.log(txtInput.value);
-};
+function errorHAndler(error) {
+    console.log("Error occurred", error);
+}
+
+function clickEventHandler() {
+    var input = txtInput.value;
+
+
+    fetch(UrlGenerator(input))
+        .then(respone => respone.json())
+        .then(json => {
+            var translated = json.contents.translated;
+            output.innerHTML = translated;
+
+        })
+
+        .catch(errorHAndler)
+
+
+ 
+
+
+
+
+
+
+
+
+
+/*
+"textarea"
+".btn-primary"
+"#input-btn"
+""
+*/
